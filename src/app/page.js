@@ -41,7 +41,7 @@ const ClutchAuthPage = () => {
   // Mock user data
   const userData = {
     name: "Sarah Johnson",
-    avatar: <img src="/ClutchIcons/user.png" alt="User" className="w-32 h-32" />,
+    avatar:<img src="/ClutchIcons/user.png" alt="User" className="w-28 h-28" />,
     helpedCount: 23,
     requestedItems: ["Period Products", "Cosmetics", "Medication"],
     activePairings: 2
@@ -172,52 +172,52 @@ const ClutchAuthPage = () => {
     return (
         <div className="min-h-screen bg-pink-50/50 flex flex-col">
           {/* Navbar - Always visible */}
-          <nav className="w-full bg-white shadow-md p-4 flex items-center justify-center sticky top-0 z-50">
-            <div className="flex items-center space-x-6">
+          <nav className="w-full bg-white shadow-md p-2 sm:p-4 flex items-center justify-center sticky top-0 z-50 overflow-x-auto">
+            <div className="flex items-center space-x-2 sm:space-x-6 min-w-max">
               <button onClick={() => setCurrentView('dashboard')}>
-                <img src={"/ClutchIcons/star.ico"} className="h-6 w-6 cursor-pointer" />
+                <img src={"/ClutchIcons/star.ico"} className="h-5 w-5 sm:h-6 sm:w-6 cursor-pointer" />
               </button>
               <button
                   onClick={() => setShowMap(true)}
-                  className="px-3 py-1 text-sm text-gray-700 hover:text-pink-600 transition duration-150 flex flex-col items-center"
+                  className="px-1 sm:px-3 py-1 text-xs sm:text-sm text-gray-700 hover:text-pink-600 transition duration-150 flex flex-col items-center"
               >
-                <img src="/ClutchIcons/location.png" alt="Location" className="h-8 w-8" />
-                <span className="text-xs">Map</span>
+                <img src="/ClutchIcons/location.png" alt="Location" className="h-6 w-6 sm:h-8 sm:w-8" />
+                <span className="text-xs hidden sm:inline">Map</span>
               </button>
               <button
                   onClick={() => setCurrentView('community')}
-                  className="px-3 py-1 text-sm text-gray-700 hover:text-pink-600 transition duration-150 flex flex-col items-center"
+                  className="px-1 sm:px-3 py-1 text-xs sm:text-sm text-gray-700 hover:text-pink-600 transition duration-150 flex flex-col items-center"
               >
-                <img src="/ClutchIcons/chat.png" alt="Chat" className="h-8 w-8" />
-                <span className="text-xs">Community</span>
+                <img src="/ClutchIcons/chat.png" alt="Chat" className="h-6 w-6 sm:h-8 sm:w-8" />
+                <span className="text-xs hidden sm:inline">Community</span>
               </button>
               <button
                   onClick={() => setCurrentView('addRequest')}
-                  className="px-3 py-1 text-sm text-gray-700 hover:text-pink-600 transition duration-150 flex flex-col items-center"
+                  className="px-1 sm:px-3 py-1 text-xs sm:text-sm text-gray-700 hover:text-pink-600 transition duration-150 flex flex-col items-center"
               >
-                <img src="/ClutchIcons/add.png" alt="Add" className="h-8 w-8" />
-                <span className="text-xs">Add Request</span>
+                <img src="/ClutchIcons/add.png" alt="Add" className="h-6 w-6 sm:h-8 sm:w-8" />
+                <span className="text-xs hidden sm:inline">Add Request</span>
               </button>
               <button
                   onClick={() => setCurrentView('help')}
-                  className="px-3 py-1 text-sm text-gray-700 hover:text-pink-600 transition duration-150 flex flex-col items-center"
+                  className="px-1 sm:px-3 py-1 text-xs sm:text-sm text-gray-700 hover:text-pink-600 transition duration-150 flex flex-col items-center"
               >
-                <img src="/ClutchIcons/caution.png" alt="Help" className="h-8 w-8" />
-                <span className="text-xs">Help</span>
+                <img src="/ClutchIcons/caution.png" alt="Help" className="h-6 w-6 sm:h-8 sm:w-8" />
+                <span className="text-xs hidden sm:inline">Help</span>
               </button>
               <button
                   onClick={() => setCurrentView('profile')}
-                  className="px-3 py-1 text-sm text-gray-700 hover:text-pink-600 transition duration-150 flex flex-col items-center"
+                  className="px-1 sm:px-3 py-1 text-xs sm:text-sm text-gray-700 hover:text-pink-600 transition duration-150 flex flex-col items-center"
               >
-                <img src="/ClutchIcons/user.png" alt="User" className="h-12 w-12" />
-                <span className="text-xs">You</span>
+                <img src="/ClutchIcons/user.png" alt="User" className="h-8 w-8 sm:h-12 sm:w-12" />
+                <span className="text-xs hidden sm:inline">You</span>
               </button>
               <button
                   onClick={() => setIsLoggedIn(false)}
-                  className="px-3 py-1 text-gray-700 hover:text-pink-600 text-sm rounded-lg transition duration-150 flex flex-col items-center"
+                  className="px-1 sm:px-3 py-1 text-gray-700 hover:text-pink-600 text-xs sm:text-sm rounded-lg transition duration-150 flex flex-col items-center"
               >
-                <img src="/ClutchIcons/logout.png" alt="Logout" className="h-8 w-8" />
-                <span className="text-xs">Logout</span>
+                <img src="/ClutchIcons/logout.png" alt="Logout" className="h-6 w-6 sm:h-8 sm:w-8" />
+                <span className="text-xs hidden sm:inline">Logout</span>
               </button>
             </div>
           </nav>
@@ -292,11 +292,11 @@ const ClutchAuthPage = () => {
               {/* DASHBOARD VIEW */}
               {currentView === 'dashboard' && (
                   <div className="max-w-6xl mx-auto">
-                    <h2 className="text-2xl font-semibold mb-6">Dashboard</h2>
+                    <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Dashboard</h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
                       {/* Mini Map Widget */}
-                      <div className="bg-white rounded-xl shadow-lg border border-pink-200 p-6">
+                      <div className="bg-white rounded-xl shadow-lg border border-pink-200 p-4 sm:p-6">
                         <h3 className="text-lg font-semibold mb-4 text-pink-700">Your Location</h3>
                         <div className="bg-gray-100 h-48 rounded-lg flex items-center justify-center mb-4">
                           {userLocation ? (
@@ -327,49 +327,43 @@ const ClutchAuthPage = () => {
                       </div>
 
                       {/* Quick Actions Grid */}
-                      <div className="grid grid-cols-2 gap-4">
+                      <div className="grid grid-cols-2 gap-3 sm:gap-4">
                         <button
                             onClick={() => setCurrentView('profile')}
-                            className="bg-white rounded-xl shadow-lg border border-pink-200 p-6 hover:shadow-xl transition flex flex-col items-center justify-center"
+                            className="bg-white rounded-xl shadow-lg border border-pink-200 p-4 sm:p-6 hover:shadow-xl transition flex flex-col items-center justify-center"
                         >
-                          <div className="mb-4">
-                            <img src="/ClutchIcons/user.png" alt="User Avatar" className="h-32 w-32 mx-auto" />
-                          </div>
-                          <p className="font-medium text-pink-700">My Profile</p>
+                          <div className="text-3xl sm:text-4xl mb-2"><img src="/ClutchIcons/user.png" alt="User" className="h-12 w-12 sm:h-16 sm:w-16" /></div>
+                          <p className="font-medium text-pink-700 text-sm sm:text-base">My Profile</p>
                         </button>
 
                         <button
                             onClick={() => setCurrentView('addRequest')}
-                            className="bg-white rounded-xl shadow-lg border border-pink-200 p-6 hover:shadow-xl transition flex flex-col items-center justify-center"
+                            className="bg-white rounded-xl shadow-lg border border-pink-200 p-4 sm:p-6 hover:shadow-xl transition flex flex-col items-center justify-center"
                         >
-                          <img src="/ClutchIcons/add.png" alt="Add Request" className="h-12 w-12 mb-2" />
-                          <p className="font-medium text-pink-700">Add Request</p>
+                          <img src="/ClutchIcons/chat.png" alt="Add Request" className="h-10 w-10 sm:h-12 sm:w-12 mb-2" />
+                          <p className="font-medium text-pink-700 text-sm sm:text-base">Add Request</p>
                         </button>
 
                         <button
                             onClick={() => setCurrentView('community')}
-                            className="bg-white rounded-xl shadow-lg border border-pink-200 p-6 hover:shadow-xl transition flex flex-col items-center justify-center"
+                            className="bg-white rounded-xl shadow-lg border border-pink-200 p-4 sm:p-6 hover:shadow-xl transition flex flex-col items-center justify-center"
                         >
-                          <div className="mb-2">
-                            <img src="/ClutchIcons/chat.png" alt="Chat" className="h-24 w-24 mx-auto" />
-                          </div>
-                          <p className="font-medium text-pink-700">Community</p>
+                          <div className="text-3xl sm:text-4xl mb-2">💬</div>
+                          <p className="font-medium text-pink-700 text-sm sm:text-base">Community</p>
                         </button>
 
                         <button
                             onClick={() => setCurrentView('help')}
-                            className="bg-white rounded-xl shadow-lg border border-pink-200 p-6 hover:shadow-xl transition flex flex-col items-center justify-center"
+                            className="bg-white rounded-xl shadow-lg border border-pink-200 p-4 sm:p-6 hover:shadow-xl transition flex flex-col items-center justify-center"
                         >
-                          <div className="mb-4">
-                            <img src="/ClutchIcons/caution.png" alt="Help" className="h-24 w-24 mx-auto" />
-                          </div>
-                          <p className="font-medium text-pink-700">Help</p>
+                          <div className="text-3xl sm:text-4xl mb-2">❓</div>
+                          <p className="font-medium text-pink-700 text-sm sm:text-base">Help</p>
                         </button>
                       </div>
                     </div>
 
                     {/* Recent Activity */}
-                    <div className="mt-6 bg-white rounded-xl shadow-lg border border-pink-200 p-6">
+                    <div className="mt-4 sm:mt-6 bg-white rounded-xl shadow-lg border border-pink-200 p-4 sm:p-6">
                       <h3 className="text-lg font-semibold mb-4 text-pink-700">Recent Activity</h3>
                       <div className="space-y-3">
                         <div className="flex items-center justify-between p-3 bg-pink-50 rounded-lg">
@@ -437,9 +431,9 @@ const ClutchAuthPage = () => {
               {/* ADD REQUEST VIEW */}
               {currentView === 'addRequest' && (
                   <div className="max-w-3xl mx-auto">
-                    <h2 className="text-2xl font-semibold mb-6">What do you need?</h2>
+                    <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">What do you need?</h2>
 
-                    <div className="grid grid-cols-2 gap-6">
+                    <div className="grid grid-cols-2 gap-3 sm:gap-6">
                       <button className="bg-white rounded-xl shadow-lg border border-pink-200 p-8 hover:shadow-xl hover:border-pink-400 transition">
                         <div className="text-6xl mb-4">🩸</div>
                         <h3 className="text-xl font-semibold text-pink-700">Period Products</h3>
@@ -545,7 +539,7 @@ const ClutchAuthPage = () => {
                   </div>
               )}
 
-              {/* HELP VIEW  for Navi*/}
+              {/* HELP VIEW for navi*/}
               {currentView === 'help' && (
                   <div className="max-w-2xl mx-auto">
                     <h2 className="text-2xl font-semibold mb-6">Help & Support</h2>

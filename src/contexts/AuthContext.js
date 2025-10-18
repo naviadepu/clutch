@@ -75,7 +75,14 @@ export const AuthContextProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider value={{ user, signIn, signUp, logOut, loading, isValidEduEmail }}>
-      {loading ? null : children}
+      {loading ? (
+        <div className="w-full h-screen bg-gradient-to-b from-black to-pink-900 flex flex-col items-center justify-center text-white">
+          <div className="w-20 h-20 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full mx-auto mb-6 flex items-center justify-center animate-pulse">
+            <div className="text-white text-2xl font-bold">C</div>
+          </div>
+          <h1 className="text-xl font-bold mb-2">Loading...</h1>
+        </div>
+      ) : children}
     </AuthContext.Provider>
   );
 };

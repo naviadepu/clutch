@@ -42,19 +42,19 @@ const GSU_CAMPUSES = ['Atlanta Campus', 'Clarkston Campus', 'Alpharetta Campus',
 
 const allMatchesData = [
   { id: 1, name: 'Emma Chen', distance: '0.3 miles', items: 'Period Products', verified: true },
-  { id: 2, name: 'Women\'s Center', distance: '0.5 miles', items: 'All Items', verified: true },
+  { id: 2, name: 'Women&apos;s Center', distance: '0.5 miles', items: 'All Items', verified: true },
   { id: 3, name: 'Sarah Martinez', distance: '0.7 miles', items: 'Period Products', verified: false },
   { id: 4, name: 'Jessica B.', distance: '0.9 miles', items: 'Pain Relief', verified: false } 
 ];
 
 const dropOffSpots = [
-  { id: 1, name: 'GSU Women\'s Center', distance: '0.5 miles', verified: true },
+  { id: 1, name: 'GSU Women&apos;s Center', distance: '0.5 miles', verified: true },
   { id: 2, name: 'Midtown Community Clinic', distance: '1.2 miles', verified: true },
   { id: 3, name: 'Partner Store: Zara (Atlantic Station)', distance: '2.5 miles', verified: true },
 ];
 
 const communityPosts = [
-  { id: 1, thread: 'Restock Updates', content: 'Heads up! The Women\'s Center just got a huge donation of pads and tampons.', user: 'Anonymous', timestamp: '2h ago', verified: false },
+  { id: 1, thread: 'Restock Updates', content: 'Heads up! The Women&apos;s Center just got a huge donation of pads and tampons.', user: 'Anonymous', timestamp: '2h ago', verified: false },
   { id: 2, thread: 'Communal Hangouts / 3rd Spaces', content: 'Study group for finals at the GSU library, 3rd floor. Safe space, all welcome!', user: 'Maya J.', timestamp: '5h ago', verified: true },
   { id: 3, thread: 'Memes & Positivity', content: 'Just a reminder that you are all amazing and capable. You got this! ❤️', user: 'Anonymous', timestamp: '1d ago', verified: false },
   { id: 4, thread: 'Personal Stories', content: 'Feeling really overwhelmed with classes and personal stuff. Just needed to vent somewhere safe.', user: 'Anonymous', timestamp: '1d ago', verified: false },
@@ -64,7 +64,7 @@ const communityPosts = [
 const notificationsData = [
   { id: 1, type: 'chat_request', from: { name: 'Alex R.', verified: true }, item: 'Pain Relief', isContact: true, status: 'pending' },
   { id: 2, type: 'chat_request', from: { name: 'Anonymous', verified: false }, item: 'Period Products', isContact: false, status: 'pending' },
-  { id: 3, type: 'info', content: 'Your donation to GSU Women\'s Center has been logged.', status: 'read' },
+  { id: 3, type: 'info', content: 'Your donation to GSU Women&apos;s Center has been logged.', status: 'read' },
   { id: 4, type: 'chat_request', from: { name: 'Jordan P.', verified: true}, item: 'Hygiene Items', isContact: true, status: 'accepted' },
 ];
 

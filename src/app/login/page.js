@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
@@ -79,7 +80,7 @@ export default function LoginPage() {
               University Email
             </label>
             <div className="relative">
-              <img src="/ClutchIcons/envelope.png" alt="Email icon" className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <Image src="/ClutchIcons/envelope.png" alt="Email icon" width={20} height={20} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
               <input
                 id="email"
                 name="email"
@@ -100,7 +101,7 @@ export default function LoginPage() {
               Password
             </label>
             <div className="relative">
-              <img src="/ClutchIcons/lock_alt.png" alt="Password icon" className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <Image src="/ClutchIcons/lock_alt.png" alt="Password icon" width={20} height={20} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
               <input
                 id="password"
                 name="password"

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { 
     MapPin, MessageSquare, User, Home, Plus, Star, ArrowLeft, Check, X, 
     Navigation, Moon, Sun, BrainCircuit, Settings as SettingsIcon, 
@@ -85,10 +85,10 @@ export default function ClutchWireframe() {
   const [requestSentTo, setRequestSentTo] = useState(null);
   const [selectedCampus, setSelectedCampus] = useState('Atlanta Campus');
 
-  const navigate = (screen) => {
+  const navigate = useCallback((screen) => {
     setPreviousScreen(currentScreen);
     setCurrentScreen(screen);
-  };
+  }, [currentScreen]);
 
   useEffect(() => {
     if (currentScreen === SCREENS.LOADING) {
@@ -196,7 +196,7 @@ export default function ClutchWireframe() {
                     I Understand, Proceed
                 </button>
                  <button onClick={onWhitelist} className={`w-full ${t.bgSecondary} ${t.textSecondary} p-3 rounded-full font-semibold text-xs hover:opacity-80 transition`}>
-                    Proceed & Don't Warn Again for {match.name}
+                    Proceed & Don&apos;t Warn Again for {match.name}
                 </button>
                 <button onClick={onCancel} className={`w-full ${t.textTertiary} p-2 rounded-full font-semibold text-xs hover:opacity-80 transition`}>
                     Cancel

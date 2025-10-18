@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { MapPin, Star, CheckCircle, Clock, Users, BrainCircuit } from 'lucide-react';
 
 const AIMatchingComponent = ({ itemType, onMatchSelected, onBack }) => {
@@ -10,7 +10,7 @@ const AIMatchingComponent = ({ itemType, onMatchSelected, onBack }) => {
     findMatches();
   }, [itemType, findMatches]);
 
-  const findMatches = async () => {
+  const findMatches = useCallback(async () => {
     try {
       setLoading(true);
       const response = await fetch('/api/ai-matching', {
@@ -46,7 +46,7 @@ const AIMatchingComponent = ({ itemType, onMatchSelected, onBack }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [itemType]);
 
   const MatchCard = ({ match, index }) => (
     <div className="bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-700 hover:border-pink-500 transition-all duration-300">

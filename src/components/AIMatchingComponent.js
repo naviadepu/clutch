@@ -8,7 +8,7 @@ const AIMatchingComponent = ({ itemType, onMatchSelected, onBack }) => {
 
   useEffect(() => {
     findMatches();
-  }, [itemType]);
+  }, [itemType, findMatches]);
 
   const findMatches = async () => {
     try {
@@ -107,7 +107,7 @@ const AIMatchingComponent = ({ itemType, onMatchSelected, onBack }) => {
           </div>
         </div>
         <div className="text-xs text-gray-400 mb-2">
-          "{match.providerProfile.bio}"
+          &quot;{match.providerProfile.bio}&quot;
         </div>
         {match.providerProfile.isVerified && (
           <div className="flex items-center">
@@ -199,7 +199,7 @@ const AIMatchingComponent = ({ itemType, onMatchSelected, onBack }) => {
             </div>
             <h3 className="text-xl font-bold text-white mb-2">No matches found</h3>
             <p className="text-gray-400 mb-6">
-              We couldn't find any available {itemType.toLowerCase()} in your area.
+              We couldn&apos;t find any available {itemType.toLowerCase()} in your area.
             </p>
             <button
               onClick={findMatches}

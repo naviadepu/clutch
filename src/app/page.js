@@ -95,7 +95,7 @@ export default function ClutchWireframe() {
       const timer = setTimeout(() => { navigate(SCREENS.AI_MATCHING); }, 2000); 
       return () => clearTimeout(timer);
     }
-  }, [currentScreen]);
+  }, [currentScreen, navigate]);
 
   useEffect(() => {
     if (!loading) {
@@ -332,7 +332,7 @@ export default function ClutchWireframe() {
               <p className={`${t.textTertiary} text-sm font-semibold mb-3`}>Recent Activity</p>
               <div className="space-y-2">
                 <div className={`${t.bgSecondary} p-3 rounded-lg`}><p className={`font-semibold text-sm ${t.text}`}>Requested: Period Products</p><p className={`text-xs ${t.textTertiary}`}>Request sent...</p></div>
-                <div className={`${t.bgSecondary} p-3 rounded-lg`}><p className={`font-semibold text-sm ${t.text}`}>Donated: All items</p><p className={`text-xs ${t.textTertiary}`}>To Women's Center</p></div>
+                <div className={`${t.bgSecondary} p-3 rounded-lg`}><p className={`font-semibold text-sm ${t.text}`}>Donated: All items</p><p className={`text-xs ${t.textTertiary}`}>To Women&apos;s Center</p></div>
               </div>
             </div>
           </div>
@@ -658,7 +658,7 @@ export default function ClutchWireframe() {
             </div>
             <div className="flex-1 p-4 space-y-3 overflow-y-auto">
               <div className={`${darkMode ? 'bg-blue-900' : 'bg-blue-100'} p-3 rounded-2xl rounded-tl-none w-3/4`}><p className={`text-sm ${darkMode ? 'text-blue-100' : 'text-gray-900'}`}>Hi, I need period products</p></div>
-              <div className={`${darkMode ? 'bg-pink-900' : 'bg-pink-100'} p-3 rounded-2xl rounded-tr-none w-3/4 ml-auto`}><p className={`text-sm ${darkMode ? 'text-pink-100' : 'text-gray-900'}`}>I have tampons and pads available! We can meet at the Women's Center or I can drop off at your dorm.</p></div>
+              <div className={`${darkMode ? 'bg-pink-900' : 'bg-pink-100'} p-3 rounded-2xl rounded-tr-none w-3/4 ml-auto`}><p className={`text-sm ${darkMode ? 'text-pink-100' : 'text-gray-900'}`}>I have tampons and pads available! We can meet at the Women&apos;s Center or I can drop off at your dorm.</p></div>
             </div>
             <div className={`${t.card} border-t ${t.divider} p-4 flex gap-2`}> 
               <input type="text" placeholder="Type message..." className={`flex-1 ${t.input} p-3 rounded-full text-sm outline-none focus:ring-2 focus:ring-pink-500`}/>

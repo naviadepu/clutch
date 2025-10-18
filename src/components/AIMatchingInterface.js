@@ -90,7 +90,7 @@ const MatchCard = ({ match, onAccept, onReject, isLoading }) => {
           </div>
         </div>
         <div className="text-xs text-gray-600 mb-2">
-          "{match.providerProfile.bio}"
+          &quot;{match.providerProfile.bio}&quot;
         </div>
         {match.providerProfile.isVerified && (
           <div className="flex items-center">
@@ -372,7 +372,7 @@ const AIMatchingInterface = ({ userId, userLocation, onMatchAccepted }) => {
           <div className="text-6xl mb-4">😔</div>
           <h3 className="text-xl font-semibold text-gray-700 mb-2">No matches found</h3>
           <p className="text-gray-600 mb-4">
-            We couldn't find any available {selectedItemType.toLowerCase()} in your area right now.
+            We couldn&apos;t find any available {selectedItemType.toLowerCase()} in your area right now.
           </p>
           <button
             onClick={() => findMatches(selectedItemType)}
@@ -389,7 +389,7 @@ const AIMatchingInterface = ({ userId, userLocation, onMatchAccepted }) => {
           <div className="text-6xl mb-4">🎯</div>
           <h3 className="text-xl font-semibold text-gray-700 mb-2">Ready to find your match?</h3>
           <p className="text-gray-600">
-            Select an item type above to start the AI matching process. We'll find the best matches based on:
+            Select an item type above to start the AI matching process. We&apos;ll find the best matches based on:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
             <div className="bg-pink-50 rounded-lg p-4">

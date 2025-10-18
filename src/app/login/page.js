@@ -79,7 +79,7 @@ export default function LoginPage() {
               University Email
             </label>
             <div className="relative">
-              <img src="/ClutchIcons/envelope.png" className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <img src="/ClutchIcons/envelope.png" alt="Email icon" className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
               <input
                 id="email"
                 name="email"
@@ -100,7 +100,7 @@ export default function LoginPage() {
               Password
             </label>
             <div className="relative">
-              <img src="/ClutchIcons/lock_alt.png" className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <img src="/ClutchIcons/lock_alt.png" alt="Password icon" className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
               <input
                 id="password"
                 name="password"
@@ -134,7 +134,7 @@ export default function LoginPage() {
           {/* Sign Up Link */}
           <div className="text-center">
             <p className="text-gray-300 text-sm">
-              Don't have an account?{' '}
+              Don&apos;t have an account?{' '}
               <button
                 type="button"
                 onClick={() => router.push('/signup')}

@@ -100,7 +100,13 @@ const ClutchAuthPage = () => {
             }).addTo(map);
 
             // Add marker for user location
-            const marker = window.L.marker([userLocation.lat, userLocation.lng]).addTo(map);
+            const customIcon = window.L.icon({
+              iconUrl: '/ClutchIcons/location.png',
+              iconSize: [32, 32],
+              iconAnchor: [16, 32],
+              popupAnchor: [0, -32]
+            });
+            const marker = window.L.marker([userLocation.lat, userLocation.lng], {icon: customIcon}).addTo(map);
             marker.bindPopup('<b>You are here!</b>').openPopup();
 
             // Add accuracy circle
